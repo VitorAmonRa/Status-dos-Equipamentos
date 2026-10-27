@@ -25,6 +25,7 @@ As rotas `/PreviewPage` e `/PreviewSpreaderPage` mantêm o endereço da versão 
 - **Busca, filtros e contadores** na Gestão.
 - **Desfazer** ao remover um equipamento.
 - **Painéis para TV** com tema escuro, relógio, contadores e indicador "Ao vivo".
+- **Painel organizável:** botão "Organizar" para arrastar e redimensionar os quadros. A grade sempre ocupa exatamente a altura da tela, e a letra de cada quadro diminui sozinha quando a lista não cabe. O layout fica salvo no navegador (cada TV guarda o seu) e "Restaurar padrão" volta ao original.
 - **Relatório** em uma página só, usando "Imprimir / salvar PDF" do navegador (substitui os dois botões de PDF).
 - Funciona no celular.
 
@@ -46,6 +47,8 @@ O modo demonstração também pode ser aberto em qualquer deploy acrescentando `
 Nesse modo nada é gravado no Firebase.
 
 ## Telas
+
+![Organizando o painel](docs/screenshots/painel-organizar.png)
 
 | Gestão | Spreaders |
 | --- | --- |

@@ -81,7 +81,7 @@ const dateFmt = new Intl.DateTimeFormat("pt-BR", {
   month: "long",
 });
 
-export const BoardShell = ({ title, error, lastUpdate, children }) => {
+export const BoardShell = ({ title, error, lastUpdate, actions, children }) => {
   const now = useClock();
   return (
     <Page>
@@ -94,6 +94,7 @@ export const BoardShell = ({ title, error, lastUpdate, children }) => {
             {lastUpdate && <span>Atualizado {lastUpdate.toLocaleTimeString("pt-BR")}</span>}
             <span>{dateFmt.format(now)}</span>
             <b>{now.toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</b>
+            {actions}
           </Status>
         </TitleRow>
         {children}
