@@ -1,37 +1,25 @@
 {
-  "name": "sistema-crud",
+  "name": "status-dos-equipamentos",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "demo": "vite --mode demo",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.11.0",
-    "file-saver": "^2.0.5",
-    "firebase": "^9.14.0",
-    "react": "^18.2.0",
-    "react-date-picker": "^9.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1",
-    "react-router-dom": "^6.4.3",
-    "react-select": "^5.8.0",
-    "react-to-pdf": "^1.0.1",
-    "react-toastify": "^9.1.1",
-    "styled-components": "^5.3.6",
-    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.2/xlsx-0.20.2.tgz"
+    "firebase": "^10.14.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^6.30.1",
+    "react-toastify": "^10.0.6",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
-    "@types/node-sass": "^4.11.3",
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
-    "@types/styled-components": "^5.1.26",
-    "@vitejs/plugin-react": "^2.2.0",
-    "node-sass": "^8.0.0",
-    "sass": "^1.56.1",
-    "typescript": "^4.6.4",
-    "vite": "^3.2.7"
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
   }
 }

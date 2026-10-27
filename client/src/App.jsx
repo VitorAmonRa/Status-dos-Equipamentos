@@ -1,34 +1,41 @@
-import React from "react"
-import { AdminPage } from "./Pages/AdminPage";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {LoginPage} from "./Pages/LoginPage";
-import Global from "./GlobalStyle/Global";
-import 'react-toastify/dist/ReactToastify.css'
-import {ToastContainer} from 'react-toastify'
-import { Private } from "./Routes/Private";
-import PreviewPage from "./Pages/PreviewPage";
-import PreviewSpreaderPage from "./Pages/PreviewSpreaderPage";
+import React from "react";
+import { BrowserRouter as Router, Navigate, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import GlobalStyle from "./styles/GlobalStyle";
+import { PrivateRoute } from "./components/PrivateRoute";
+import { LoginPage } from "./pages/LoginPage";
+import { AdminPage } from "./pages/AdminPage";
+import { BoardPage } from "./pages/BoardPage";
+import { SpreadersPage } from "./pages/SpreadersPage";
+import { ReportPage } from "./pages/ReportPage";
 
+// As rotas /PreviewPage e /PreviewSpreaderPage têm o mesmo endereço da versão
+// original, para que TVs e favoritos continuem funcionando.
 function App() {
-
   return (
     <>
-    <Global/>
-    <ToastContainer autoClose={200} limit={20} />
+      <GlobalStyle />
+      <ToastContainer position="bottom-right" autoClose={2500} limit={4} newestOnTop />
       <Router>
         <Routes>
-          <Route path="PreviewSpreaderPage" element={ <PreviewSpreaderPage/> }/>
-          <Route path="PreviewPage" element={ <PreviewPage/> }/>
-          <Route path="login" element={ <LoginPage/> }/>
-          <Route path="/" element={ 
-            <Private>  
-              <AdminPage/>  
-            </Private>
-          }/>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/PreviewPage" element={<BoardPage />} />
+          <Route path="/PreviewSpreaderPage" element={<SpreadersPage />} />
+          <Route path="/relatorio" element={<ReportPage />} />
+          <Route
+            path="/"
+            element={
+              <PrivateRoute>
+                <AdminPage />
+              </PrivateRoute>
+            }
+          />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
