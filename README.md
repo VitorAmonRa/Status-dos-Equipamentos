@@ -1,7 +1,7 @@
 # Status dos Equipamentos · v2
 
 Painel em tempo real da situação dos equipamentos e da localização dos spreaders da Portonave.
-Esta é a versão remodelada (branch `redesign`). A versão original continua na branch `main`.
+Esta é a versão remodelada (branch `redesign`). A versão original continua na branch `master`.
 
 ![Painel](docs/screenshots/painel.png)
 
